@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 1.5rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background: linear-gradient(169.52deg, rgba(35, 33, 33, 0.85) -3.32%, rgba(244, 10, 94, 0.85) 122.16%);
+}
+
+.header h1 {
+  margin-bottom: 3rem;
+}
+
+.header h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.header span {
+  font-size: 2rem;
+}
+
+.transactions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 1.5rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  background: linear-gradient(169.98deg, rgba(35, 33, 33, 0.85) -11.91%, rgba(244, 10, 94, 0.85) 96.13%, rgba(244, 10, 94, 0.85) 106.61%);
+}
+
+.transactions ul {
+  width: 100%;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.transaction__item, .transaction__value {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction__item span:first-child {
+  font-size: 1.5rem;
+}
+
+.transaction__item span:last-child {
+  font-size: 0.8rem;
+}
+
+.transaction__value {
+  align-items: end;
+}
+
+.transaction__value span:first-child {
+  font-size: 1.3rem;
+}
+
+.transaction__value span:last-child {
+  font-size: 1rem;
+  color: rgba(69, 244, 108, 1);
+}

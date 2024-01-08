@@ -1,0 +1,48 @@
+{
+  "name": "acelera-trybe-psel",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "engineStrict": true,
+  "description": "Com a chegada do OpenBanking no Brasil as transações bancárias passaram a ser menos burocráticas, permitindo que qualquer empresa possa realizar transações através de qualquer instituição financeira que utiliza o OpenBanking.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon --config nodemon.json --inspect=0.0.0.0:9229 ./src/server.js ",
+    "coverage": "nyc --all --include src/models --include src/services --include src/controllers mocha tests/**/*.js --exit",
+    "postcoverage": "rm -rf .nyc_output",
+    "test": "mocha ./tests/**/*.test.js --exit",
+    "unit": "mocha ./tests/unit/*.test.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betrybe/acelera-trybe-psel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betrybe/acelera-trybe-psel/issues"
+  },
+  "homepage": "https://github.com/betrybe/acelera-trybe-psel#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "4.17.1",
+    "joi": "^17.8.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^3.2.0",
+    "sinon": "^15.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint-config-trybe-backend": "^2.1.0",
+    "frisby": "^2.1.3",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.21",
+    "nyc": "^15.1.0"
+  }
+}

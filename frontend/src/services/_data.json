@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "identifier": "878.504.990-50",
+      "name": "Teste Trybe",
+      "email": "teste@teste.com",
+      "status": true
+    }
+  ],
+  "login": {
+    "token": "234@#vdsv213412343@@#$@#"
+  },
+  "transactions": [
+    {
+      "transactionId": 123123123345453567765734,
+      "documento": "123475789-10",
+      "accountId": 1,
+      "date": "2023-03-08T12:48:25.000Z",
+      "value": 105.39,
+      "cashback": 0.02
+    },
+    {
+      "transactionId": 897609876572398740237613,
+      "documento": "123475789-10",
+      "accountId": 1,
+      "date": "2023-03-09T09:23:58.000Z",
+      "value": 641.23,
+      "cashback": 0.025
+    }
+  ]
+}

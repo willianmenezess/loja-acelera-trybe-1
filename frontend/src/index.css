@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  font-family: 'Playfair Display', serif;
+  --main-color: rgba(255, 255, 255, 1);
+  --accent: rgba(244, 24, 183, 1);
+  background: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.app__container {
+  display: flex;
+}
+
+main {
+  flex: 1;
+  height: 100vh;
+}
+
+main > section {
+  position: relative;
+  padding: 1rem 3rem;
+}
+
+@media (max-width: 750px) {
+  .banner {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  node:
+    image: node:16-alpine
+    container_name: bank
+    ports:
+      - 3001:3001
+      - 9229:9229
+    volumes:
+      - ./:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - name=value
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_DATABASE=bank
+      - JWT_SECRET='super-secret-bank'
+  db:
+    build: 
+      context: ./
+      dockerfile: DockerfileMySQL
+    container_name: bank_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - 3306:3306
+    healthcheck:
+      test: mysqladmin ping -u root -p$MYSQL_ROOT_PASSWORD
+      interval: 15s
+      timeout: 15s
+      retries: 5
+      start_period: 15s

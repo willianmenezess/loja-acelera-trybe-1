@@ -1,0 +1,41 @@
+.profile {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.profile p {
+  font-size: 1.5rem;
+}
+
+.profile span {
+  font-size: 0.9rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.links a:hover {
+  background-color: #f2f4f8;
+}
+
+.menu > button:last-child {
+  border: 1px solid #207198;
+  border-radius: 28px;
+  width: 100%;
+  margin-top: 100%;
+}
+
+.drawer > button:first-child {
+  position: absolute;
+  right: 0.5rem;
+  background: #aaa;
+  color: white;
+  top: 0.5rem;
+}
