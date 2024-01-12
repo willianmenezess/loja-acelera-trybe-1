@@ -9,7 +9,10 @@ const create = async (req, res) => {
   res.status(201).json(transaction);
 };
 
+// retorna todas as transações da conta que está logada
 const getAll = async (req, res) => {
+// accountId está no objeto req.account, pois o middleware de autenticação
+// colocou ele lá
   const { accountId, status = true } = req.account;
   const transactions = await service.getAll({ accountId, status });
 

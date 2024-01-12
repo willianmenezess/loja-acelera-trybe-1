@@ -11,6 +11,7 @@ const create = async ({ accountId, value }) => {
   return { transactionId: rows.insertId, accountId, value, date };
 };
 
+// retorna todas as transações da conta que está logada
 const getAll = async ({ accountId, status = true }) => {
   const [rows] = await connection.execute(`
     SELECT 
