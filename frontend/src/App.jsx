@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={ <CreateAccount /> } />
             <Route path="/login" element={ <Login /> } />
-            <Route path="account" element={ <Menu /> }>
+            <Route path="/account" element={ <Menu /> }>
               <Route index element={ <BankStatement /> } />
               <Route path="edit" element={ <EditAccount /> } />
             </Route>

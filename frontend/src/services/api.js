@@ -16,6 +16,7 @@ export async function login(identifier, password) {
   // const response = await fetch(`${URL}/login`);
 
   if (response.ok) {
+    console.log(response);
     return response.json();
   }
 
@@ -25,7 +26,7 @@ export async function login(identifier, password) {
 export async function getTransactions(token) {
   const response = await fetch(`${URL}/transactions`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `${token}`,
     },
   });
 
@@ -37,9 +38,9 @@ export async function getTransactions(token) {
 }
 
 export async function getAccount(token) {
-  const response = await fetch(`${URL}/accounts/1`, {
+  const response = await fetch(`${URL}/accounts`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `${token}`,
     },
   });
 
@@ -70,7 +71,7 @@ export async function editAccount(editedAccount, token) {
     body: JSON.stringify(editedAccount),
     headers: {
       ...headers,
-      Authorization: `Bearer ${token}`,
+      Authorization: `${token}`,
     },
   });
 
@@ -86,7 +87,7 @@ export async function deleteAccount(id, token) {
     method: 'DELETE',
     headers: {
       ...headers,
-      Authorization: `Bearer ${token}`,
+      Authorization: `${token}`,
     },
   });
 
