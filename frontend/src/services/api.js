@@ -66,7 +66,7 @@ export async function createAccount(newAccount) {
 }
 
 export async function editAccount(editedAccount, token) {
-  const response = await fetch(`${URL}/accounts/${editedAccount.id}`, {
+  const response = await fetch(`${URL}/accounts`, {
     method: 'PUT',
     body: JSON.stringify(editedAccount),
     headers: {
