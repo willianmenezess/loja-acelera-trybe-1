@@ -26,7 +26,7 @@ function BankStatement() {
       <header className="header">
         <Title title="Extrato" />
         <h2>Total de cashback</h2>
-        <span>{`R$ ${transactions.reduce((s, t) => s + t.value, 0)}`}</span>
+        <span>{`R$ ${transactions.reduce((s, t) => s + t.value * t.cashback, 0)}`}</span>
       </header>
       <section className="transactions">
         <ul>
