@@ -82,8 +82,8 @@ export async function editAccount(editedAccount, token) {
   throw new Error(SERVER_ERROR);
 }
 
-export async function deleteAccount(id, token) {
-  const response = await fetch(`${URL}/accounts/${id}`, {
+export async function deleteAccount(token) {
+  const response = await fetch(`${URL}/accounts`, {
     method: 'DELETE',
     headers: {
       ...headers,

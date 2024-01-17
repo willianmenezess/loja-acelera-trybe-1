@@ -28,7 +28,7 @@ function EditAccount() {
 
   const handleDeleteAccount = () => {
     try {
-      deleteAccount(account.id, token);
+      deleteAccount(token);
     } catch (error) {
       console.log(error.message);
     }
