@@ -7,16 +7,13 @@ const headers = {
 };
 
 export async function login(identifier, password) {
-  console.log(identifier, password);
   const response = await fetch(`${URL}/login`, {
     method: 'POST',
     body: JSON.stringify({ identifier, password }),
     headers,
   });
-  // const response = await fetch(`${URL}/login`);
 
   if (response.ok) {
-    console.log(response);
     return response.json();
   }
 
@@ -66,9 +63,10 @@ export async function createAccount(newAccount) {
 }
 
 export async function editAccount(editedAccount, token) {
+  const { name, identifier, email, password, status } = editedAccount;
   const response = await fetch(`${URL}/accounts`, {
     method: 'PUT',
-    body: JSON.stringify(editedAccount),
+    body: JSON.stringify({ name, identifier, email, password, status }),
     headers: {
       ...headers,
       Authorization: `${token}`,

@@ -16,8 +16,11 @@ function EditAccount() {
   const [status, setStatus] = useState(account.status);
 
   const handleSubmit = async (editedAccount) => {
-    console.log(editedAccount);
-
+    if (editedAccount.status === 1) {
+      editedAccount.status = true;
+    } else {
+      editedAccount.status = false;
+    }
     await editAccount({
       ...account,
       ...editedAccount,

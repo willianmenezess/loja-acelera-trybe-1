@@ -15,7 +15,7 @@ function Menu() {
   const toggleDrawer = () => setIsOpen((prevState) => !prevState);
 
   useEffect(() => {
-    console.log('cheguei no /account');
+    // console.log('cheguei no /account');
     async function fetchAccount() {
       try {
         const response = await getAccount(token);
