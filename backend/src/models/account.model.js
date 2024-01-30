@@ -77,5 +77,3 @@ const isExists = async (identifier) => {
 };
 
 module.exports = { create, login, update, destroy, getOne, isExists };
-
-// commit inicial
